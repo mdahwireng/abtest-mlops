@@ -32,5 +32,5 @@ save_csv(platform_testX, './data/platform_testX.csv')
 save_csv(platform_testY, './data/platform_testY.csv')
 
 platform_valX, platform_valY = get_target(browser_val)
-save_csv(platform_valX, './data/platform_valY.csv')
+save_csv(platform_valX, './data/platform_valX.csv')
 save_csv(platform_valY, './data/platform_valY.csv')
