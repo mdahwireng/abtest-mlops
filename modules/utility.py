@@ -10,5 +10,5 @@ def get_csv_data(path, version):
     return df
 
 def save_csv(df, path):
-    df.to_csv(path)
+    df.to_csv(path, index=False)
     print('Data saved as {}'.format(path))
