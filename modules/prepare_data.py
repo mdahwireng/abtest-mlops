@@ -27,10 +27,15 @@ class PrepareData():
         if output:
             return data
 
+    def get_day(self):
+        data = self.data.copy()
+        data['day'] = data['date'].apply(lambda x:x.weekday())
+        self.data = data
+
     def subset(self):
         data = self.data.copy()
-        browser_cols = ['experiment', 'date', 'hour', 'device_make', 'browser', 'answer']
-        platform_cols = ['experiment', 'date', 'hour', 'device_make', 'platform_os', 'answer']
+        browser_cols = ['experiment', 'date', 'day', 'hour', 'device_make', 'browser', 'answer']
+        platform_cols = ['experiment', 'date', 'day', 'hour', 'device_make', 'platform_os', 'answer']
         browser_df = data[browser_cols]
         platform_df = data[platform_cols]
         return browser_df, platform_df
