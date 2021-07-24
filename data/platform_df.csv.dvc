@@ -1,0 +1,4 @@
+outs:
+- md5: b9ff692dbc3e36b4eacceb189a8e68cb
+  size: 18243
+  path: platform_df.csv
