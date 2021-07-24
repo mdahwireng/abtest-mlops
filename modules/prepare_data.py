@@ -2,9 +2,12 @@ from sklearn.preprocessing import LabelEncoder
 
 class PrepareData():
     def __init__(self, df) -> None:
-        self.data = df.copy()
+        data = df.copy()
+        data.rename(columns={'yes':'answer'}, inplace=True)
+        self.data = data
 
-    def encode_cat(self, cols, output=True):
+
+    def encode_cat(self, cols, output=False):
         data = self.data.copy()
         print('Encoding categorical columns...')
         for col in cols:
@@ -15,8 +18,19 @@ class PrepareData():
         if output:
             return data
 
-    def drop_id_col(self, id_col):
+
+    def drop_id_col(self, id_col, output=False):
         print('Dropping id_column...')
         data = self.data.copy()
         data.drop(columns=id_col, inplace=True)
-        return data
+        self.data = data
+        if output:
+            return data
+
+    def subset(self):
+        data = self.data.copy()
+        browser_cols = ['experiment', 'date', 'hour', 'device_make', 'browser', 'answer']
+        platform_cols = ['experiment', 'date', 'hour', 'device_make', 'platform_os', 'answer']
+        browser_df = data[browser_cols]
+        platform_df = data[platform_cols]
+        return browser_df, platform_df
