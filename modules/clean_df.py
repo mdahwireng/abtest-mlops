@@ -16,4 +16,5 @@ class CleanData:
         answered_index = ((data['yes'] == 1) | (data['no'] ==1))
         cleaned_df = data[answered_index]
         cleaned_df.reset_index(drop=True, inplace=True)
-        self.data = cleaned_df  
+        self.data = cleaned_df
+        return cleaned_df  
