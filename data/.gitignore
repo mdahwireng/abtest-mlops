@@ -1,3 +1,15 @@
 /AdSmartABdata.csv
 /bowser_df.csv
 /platform_df.csv
+/browser_testX.csv
+/browser_testY.csv
+/browser_trainX.csv
+/browser_trainY.csv
+/browser_valX.csv
+/browser_valY.csv
+/platform_testX.csv
+/platform_testY.csv
+/platform_trainX.csv
+/platform_trainY.csv
+/platform_valY.csv
+/platform_valX.csv

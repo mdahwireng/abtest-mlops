@@ -1,0 +1,4 @@
+outs:
+- md5: 2fa00e9a96d21c158ee88366ca039d4e
+  size: 3176
+  path: platform_testX.csv

@@ -1,0 +1,4 @@
+outs:
+- md5: ecaefbe8bb5fb6610ff062d34685a81e
+  size: 1625
+  path: platform_valX.csv
